@@ -1,0 +1,26 @@
+.list li {
+  margin: 10px 0;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.list button.confirm {
+  margin-left: 10px;
+}
+
+.list button {
+  padding: 5px 5px;
+}
+
+.list {
+  border-bottom: 2px dotted black;
+  border-left: 2px dotted black;
+  border-right: 2px dotted black;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.list h2 {
+  margin-bottom: 30px;
+}
