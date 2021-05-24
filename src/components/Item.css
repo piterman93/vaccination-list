@@ -1,6 +1,6 @@
 .list li {
   margin: 10px 0;
-  font-weight: bold;
+  /* font-weight: bold; */
   list-style-type: none;
 }
 
@@ -10,6 +10,7 @@
 
 .list button {
   padding: 5px 5px;
+  margin-left: 10px;
 }
 
 .list {
@@ -23,4 +24,9 @@
 
 .list h2 {
   margin-bottom: 30px;
+}
+
+.list h3 {
+  margin: 30px 0;
+  font-size: 22px;
 }

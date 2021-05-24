@@ -1,34 +1,49 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import "./Item.css";
 
-const Item = ({ name, id, vaccined, date }) => {
+const Item = ({ name, vaccined, date, active }) => {
   const styles = {
     color: "red",
     fontWeight: "bold",
   };
 
-  const userVaccined = (
+  const userAfterFirstDose = (
     <em>
-      {id} : {name} - <span style={styles}> first dose: {date}</span>
+      <strong>{name}</strong> - <span style={styles}> first dose: {date}</span>
     </em>
   );
 
-  const userNotVaccined = (
+  const userBeforeFirstDose = (
     <em>
-      {id} : {name} - N/A
+      <strong>{name}</strong> - N/A
     </em>
   );
 
-  const user = vaccined ? userVaccined : userNotVaccined;
+  const user = vaccined ? userAfterFirstDose : userBeforeFirstDose;
 
-  return (
+  const activeUserLi = (
     <li>
-      {user}
-      <button className="confirm"> Zaszczepiony </button>
-      <button> X </button>
+      {user} <button className="confirm"> Zaszczepiony </button>{" "}
+      <button> X </button>{" "}
     </li>
   );
+  if (active) {
+    return activeUserLi;
+  } else {
+    const currentDate = new Date().getTime();
+    const vaccinationDate = new Date(currentDate).toLocaleString();
+
+    const vaccinedUser = (
+      <li>
+        {user}
+        <button> X </button> <br />
+        <p>(zaszczepiony/na - {vaccinationDate})</p>
+      </li>
+    );
+
+    return vaccinedUser;
+  }
 };
 
 export default Item;

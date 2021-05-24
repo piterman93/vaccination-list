@@ -5,22 +5,25 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [users, setUsers] = useState([
     {
-      id: 1,
+      id: 0,
       name: "Jan Kowalski",
+      afterFirstDose: false,
+      firstDoseDate: "",
+      active: true,
+    },
+    {
+      id: 1,
+      name: "Agnieszka Nowak",
       afterFirstDose: true,
       firstDoseDate: "2021-04-25",
+      active: false,
     },
     {
       id: 2,
-      name: "Agnieszka Nowak",
-      afterFirstDose: false,
-      firstDoseDate: "",
-    },
-    {
-      id: 3,
       name: "Marcin Brach",
       afterFirstDose: true,
       firstDoseDate: "2021-03-25",
+      active: true,
     },
   ]);
 
