@@ -2,7 +2,16 @@ import React from "react";
 
 import "./Item.css";
 
-const Item = ({ name, vaccined, date, active }) => {
+const Item = ({
+  name,
+  vaccined,
+  date,
+  active,
+  clickRemoval,
+  clickChangeActive,
+  id,
+  vaccinDate,
+}) => {
   const styles = {
     color: "red",
     fontWeight: "bold",
@@ -24,20 +33,23 @@ const Item = ({ name, vaccined, date, active }) => {
 
   const activeUserLi = (
     <li>
-      {user} <button className="confirm"> Zaszczepiony </button>{" "}
-      <button> X </button>{" "}
+      {user}
+      <button className="confirm" onClick={() => clickChangeActive(id)}>
+        {" "}
+        Zaszczepiony{" "}
+      </button>{" "}
+      <button onClick={() => clickRemoval(id)}> X </button>{" "}
     </li>
   );
   if (active) {
     return activeUserLi;
   } else {
-    const currentDate = new Date().getTime();
-    const vaccinationDate = new Date(currentDate).toLocaleString();
+    const vaccinationDate = new Date(vaccinDate).toLocaleString();
 
     const vaccinedUser = (
       <li>
         {user}
-        <button> X </button> <br />
+        <button onClick={() => clickRemoval(id)}> X </button> <br />
         <p>(zaszczepiony/na - {vaccinationDate})</p>
       </li>
     );

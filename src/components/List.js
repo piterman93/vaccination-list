@@ -4,7 +4,7 @@ import { AppContext } from "./AppContext";
 import Item from "./Item";
 
 const List = () => {
-  const users = useContext(AppContext);
+  const { users, handleActiveChange, handleRemoval } = useContext(AppContext);
 
   const activeUsers = users.filter((user) => user.active);
   const notActiveUsers = users.filter((user) => !user.active);
@@ -17,6 +17,9 @@ const List = () => {
       id={user.id}
       date={user.firstDoseDate}
       active={user.active}
+      clickChangeActive={handleActiveChange}
+      clickRemoval={handleRemoval}
+      vaccinDate={user.vaccinDate}
     />
   ));
 
@@ -28,6 +31,9 @@ const List = () => {
       id={user.id}
       date={user.firstDoseDate}
       active={user.active}
+      clickChangeActive={handleActiveChange}
+      clickRemoval={handleRemoval}
+      vaccinDate={user.vaccinDate}
     />
   ));
 
