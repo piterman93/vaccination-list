@@ -2,4 +2,21 @@
   border: 2px solid black;
   width: 90vw;
   margin: 0 auto;
+  min-height: 30vh;
+}
+
+.panel h1 {
+  margin: 20px 0;
+}
+
+.panel input {
+  margin: 10px 5px;
+}
+
+.panel button {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-radius: 10px;
 }
