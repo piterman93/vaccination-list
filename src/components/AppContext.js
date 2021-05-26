@@ -48,8 +48,34 @@ const AppProvider = ({ children }) => {
     setUsers(array);
   };
 
+  let counter = users.length + 1;
+
+  // const clearValues = () => {};
+
+  const handleAddition = (name, vaccined, firstDate) => {
+    if (name) {
+      if (vaccined && !firstDate)
+        return alert("Musisz podać datę pierwszego szczepienia");
+      const newUser = {
+        id: counter,
+        name: name,
+        afterFirstDose: vaccined,
+        firstDoseDate: firstDate,
+        active: true,
+        vaccinDate: null,
+      };
+      counter++;
+      let array = [...users];
+      array = [...array, newUser];
+      setUsers(array);
+      return true;
+    } else return alert("Musisz podać dane pacjenta");
+  };
+
   return (
-    <AppContext.Provider value={{ users, handleActiveChange, handleRemoval }}>
+    <AppContext.Provider
+      value={{ users, handleActiveChange, handleRemoval, handleAddition }}
+    >
       {children}
     </AppContext.Provider>
   );

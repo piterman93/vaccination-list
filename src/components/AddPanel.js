@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import "./AddPanel.css";
+import { AppContext } from "./AppContext";
 
 const AddPanel = () => {
   const currentTime = new Date().getTime();
   const date = new Date(currentTime).toLocaleDateString();
 
+  const { handleAddition } = useContext(AppContext);
+
   const [name, setName] = useState("");
   const [vaccined, setVaccined] = useState(false);
   const [firstDate, setFirstDate] = useState("");
+
+  const handleClick = () => {
+    const add = handleAddition(name, vaccined, firstDate);
+    if (add) {
+      setName("");
+      setVaccined(false);
+      setFirstDate("");
+    }
+  };
 
   return (
     <div className="panel">
@@ -39,7 +51,7 @@ const AddPanel = () => {
         />
       </label>
       <br />
-      <button>Zapisz pacjenta</button>
+      <button onClick={handleClick}>Zapisz pacjenta</button>
     </div>
   );
 };
