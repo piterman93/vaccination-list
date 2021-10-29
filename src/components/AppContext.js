@@ -50,8 +50,6 @@ const AppProvider = ({ children }) => {
 
   let counter = users.length + 1;
 
-  // const clearValues = () => {};
-
   const handleAddition = (name, vaccined, firstDate) => {
     if (name) {
       if (vaccined && !firstDate)
