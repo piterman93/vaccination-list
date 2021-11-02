@@ -5,11 +5,19 @@
 
 .list button.confirm {
   margin-left: 10px;
+  font-size: 14px;
+  background-color: rgb(231, 198, 12);
 }
 
 .list button {
   padding: 5px 5px;
   margin-left: 10px;
+  font-size: 14px;
+  background-color: rgb(231, 198, 12);
+}
+
+.list button:hover {
+  background-color: rgb(228, 228, 64);
 }
 
 .list {

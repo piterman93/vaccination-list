@@ -4,14 +4,14 @@ import "./AddPanel.css";
 import { AppContext } from "./AppContext";
 
 const AddPanel = () => {
+  const [name, setName] = useState("");
+  const [vaccined, setVaccined] = useState(false);
+  const [firstDate, setFirstDate] = useState("");
+
   const currentTime = new Date().getTime();
   const date = new Date(currentTime).toLocaleDateString();
 
   const { handleAddition } = useContext(AppContext);
-
-  const [name, setName] = useState("");
-  const [vaccined, setVaccined] = useState(false);
-  const [firstDate, setFirstDate] = useState("");
 
   const handleClick = () => {
     const add = handleAddition(name, vaccined, firstDate);

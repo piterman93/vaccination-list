@@ -12,6 +12,9 @@
 
 .panel input {
   margin: 10px 5px;
+  padding: 10px 0;
+  border-radius: 6px;
+  background-color: bisque;
 }
 
 .panel button {
@@ -20,4 +23,9 @@
   margin-bottom: 20px;
   font-size: 14px;
   border-radius: 10px;
+  background-color: rgb(231, 198, 12);
+}
+
+.panel button:hover {
+  background-color: rgb(228, 228, 64);
 }
