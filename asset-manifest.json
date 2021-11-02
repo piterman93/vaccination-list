@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/vaccination-list/static/css/main.423c6bfd.chunk.css",
+    "main.js": "/vaccination-list/static/js/main.4cb097e8.chunk.js",
+    "main.js.map": "/vaccination-list/static/js/main.4cb097e8.chunk.js.map",
+    "runtime-main.js": "/vaccination-list/static/js/runtime-main.ae530894.js",
+    "runtime-main.js.map": "/vaccination-list/static/js/runtime-main.ae530894.js.map",
+    "static/js/2.f10ad87e.chunk.js": "/vaccination-list/static/js/2.f10ad87e.chunk.js",
+    "static/js/2.f10ad87e.chunk.js.map": "/vaccination-list/static/js/2.f10ad87e.chunk.js.map",
+    "index.html": "/vaccination-list/index.html",
+    "static/css/main.423c6bfd.chunk.css.map": "/vaccination-list/static/css/main.423c6bfd.chunk.css.map",
+    "static/js/2.f10ad87e.chunk.js.LICENSE.txt": "/vaccination-list/static/js/2.f10ad87e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae530894.js",
+    "static/js/2.f10ad87e.chunk.js",
+    "static/css/main.423c6bfd.chunk.css",
+    "static/js/main.4cb097e8.chunk.js"
+  ]
+}
